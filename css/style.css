@@ -3,6 +3,62 @@ body{
   overflow: hidden;
 }
 
+
+
+.loadLayer{
+  position: fixed;
+  z-index: 1000;
+}
+.planet{
+  width: 1vw;
+}
+.black{
+  background: rgba(0, 0, 0, 0.752);
+  
+}
+.fullSc{
+  width: 100vw;
+  height: 100vh;
+}
+.onTop{
+  position: fixed;
+  z-index: 100000;
+}
+.beneath{
+  position: fixed;
+  z-index: 10000;
+}
+.center{
+  position: absolute;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+}
+
+.press{
+  position: absolute;
+  translate: -50% -50%;
+  left: 50%;
+  top: 80%;
+}
+
+.continue{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  width: 0px;
+  height: 1em;
+  overflow: hidden;
+  text-align: center;
+  transition: all 5000ms ;
+}
+
+
+
+
+
+
+
 .blob{
   background:   linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   height: 500px;
@@ -39,8 +95,9 @@ opacity: 50%;
   position: fixed;
   z-index: 100;
   width: 80%;
-  left: 5%;
+  left: 100%;
   top: 5%;
+  transition: all 1000ms ease;
 }
 
 #mainScrib{
@@ -48,14 +105,17 @@ opacity: 50%;
   z-index: 100;
   width: 50%;
   right: 0;
+  translate: 0 -100%;
+  transition: all 1000ms ease;
 }
 
 #mainDate{
   position: fixed;
   z-index: 100;
   width: 30%;
-  left: 5%;
+  left: -100%;
   top: 40%;
+  transition: all 1000ms ease;
 }
 
 .ticketButton{
@@ -63,7 +123,7 @@ opacity: 50%;
   z-index: 100;
   bottom: 5%;
   right: 5%;
-  padding: 20px 50px;
+  padding: 10px 25px;
   border-radius: 1000px;
   border-color: #E52521;
   border: 2px solid #ff0000;
@@ -73,7 +133,16 @@ opacity: 50%;
 .ticketButton p{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 15px;
   color: #E52521;
+
+}
+
+@media screen and (max-width: 500px){
+  .ticketButton{
+    translate: -50% 0%;
+    left: 50%;
+    right: auto;
+  }
 
 }
