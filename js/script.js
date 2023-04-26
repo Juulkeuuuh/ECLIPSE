@@ -54,11 +54,19 @@ $(document).ready(function(){
 
 
 $('.beneath').click(function () {
+
     $('.planet').css({
-    'width': '1000vw',
+    'width': '10vw',
     'opacity': '0%'
   })
 
+  setTimeout(function() {
+    $('.planet').css({
+      'width': '1000vw',
+      // 'opacity': '0%'
+    })
+  }, 150);
+  
   setTimeout(function() {
     $('.loadLayer').css({
     'opacity': '0%'
@@ -67,7 +75,7 @@ $('.beneath').click(function () {
 
   setTimeout(function() {
     $('.loadLayer').remove();
-  }, 300);
+  }, 500);
 
 })
 
