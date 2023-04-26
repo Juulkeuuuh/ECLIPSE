@@ -2,19 +2,34 @@
 
 $(document).ready(function(){
   var viewportWidth = $(window).width();
-  // $(document).mousemove(function(event) {
-  //   $('.blob').css({
-  //     'left': event.pageX,
-  //     'top': event.pageY
-  //   });
-  // });
 
+
+// moving blob
+  var lastMouseX = null;
+  var lastMouseY = null;
+  var requestId = null;
+  
   $(document).mousemove(function(event) {
-    $('.blob').stop().animate({
-      'left': event.pageX,
-      'top': event.pageY
-    }, 30, 'linear');
+    lastMouseX = event.pageX;
+    lastMouseY = event.pageY;
+    
+    if (!requestId) {
+      requestId = window.requestAnimationFrame(updateBlobPosition);
+    }
   });
+  
+  function updateBlobPosition() {
+    $('.blob').css({
+      'left': lastMouseX,
+      'top': lastMouseY
+    });
+    
+    requestId = null;
+  }
+
+
+
+// intro
   if (viewportWidth < 500) {
     $('.planet').css({
       'transition': 'all ease 1000ms',
