@@ -1,6 +1,8 @@
 body{
   background: black;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;  
+
 }
 
 
@@ -59,6 +61,91 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+.data{
+  /* background: white; */
+  position: absolute;
+  z-index: 4;
+  max-width: 90%;
+  left: 5%;
+  top: 20vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #E52521;
+}
+
+.event{
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.event h1{
+  font-size: 90px;
+  font-weight: 900;
+  transition: all 1000ms ease;
+}
+.event h1 strong{
+  font-size: 70px;
+  font-weight: 100;
+}
+
+.event h1:hover{
+  translate: 100px 0;
+  /* margin-left: 100px; */
+  transition: all 1000ms ease;
+}
+
+hr{
+  translate: 0 -15px;
+  border: 2px solid #E52521;
+  width: 50px;
+  margin-left: 0;
+}
+
+
+@media screen and (max-width: 1080px){
+  .event h1{
+    font-size: 70px;
+    font-weight: 900;
+    transition: all 1000ms ease;
+  }
+  .event h1 strong{
+    font-size: 70px;
+    font-weight: 100;
+  }
+  
+  .event h1:hover{
+    translate: 100px 0;
+    /* margin-left: 100px; */
+    transition: all 1000ms ease;
+  }
+  
+  hr{
+    translate: 0 -15px;
+    border: 2px solid #E52521;
+    width: 50px;
+    margin-left: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 .blob{
   background:   linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   height: 500px;
@@ -88,6 +175,19 @@ opacity: 50%;
   z-index: 2;
   backdrop-filter: blur(250px);
   -webkit-backdrop-filter: blur(200px);
+}
+
+.overlay{
+  /* width: 100%; */
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  opacity: .1;
+}
+.overlay img{
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -145,4 +245,166 @@ opacity: 50%;
     right: auto;
   }
 
+}
+
+
+
+
+
+
+
+
+
+/* event window */
+.eventOverlay{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+}
+.eventWindowRight{
+  width: 300px;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  /* background: white; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px 0 0 30px;
+  padding-bottom: 10px;
+  overflow: scroll;
+  transition: all 2000ms ease;
+}
+.eventWindowLeft{
+  width: 300px;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  /* background: white; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0px 30px 30px 0px;
+  padding-bottom: 10px;
+  overflow: scroll;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 2000ms ease;
+
+}
+
+
+.eventTitleTicks{
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+  color: white;
+}
+
+.eventTitle{
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+}
+.eventTitle strong{
+  font-size: 15px;
+  font-weight: 400;
+}
+.artists{
+
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.artists h1{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.artists a{
+  color: white;
+}
+
+.artists h2{
+  font-size: 18px;
+  font-weight: 900;
+}
+.extraInfo{
+  width: 80%;
+  margin: auto;
+}
+.extraInfo p{
+  font-size: 15px;
+  text-transform: none;
+}
+.eventEmbedding{
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  /* margin-top: 10%; */
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.location{
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.location h1{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.location h2{
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 0px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #ffffff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }

@@ -95,6 +95,60 @@ $('.beneath').click(function () {
 })
 
 
+var eventWindowLeft = viewportWidth - 310;
+console.log(viewportWidth, eventWindowLeft);
+$('.eventWindowLeft').css({
+  'width': eventWindowLeft
+})
 
+
+
+$('.eventOverlay').css({
+  'display': 'none'
+})
+$('.eventWindowLeft').css({
+  'translate': '-100% -50%'
+
+})
+$('.eventWindowRight').css({
+  'translate': '100% -50%'
+})
+
+
+
+$('.event h1').click(function () {
+
+  $('.eventOverlay').css({
+    'display': 'block',
+  })
+
+  setTimeout(function() {
+    $('.eventWindowLeft').css({
+      'translate': '0 -50%'
+  
+    })
+    $('.eventWindowRight').css({
+      'translate': '0 -50%'
+    })
+  }, 500);
+})
+
+$('.close').click(function () {
+
+  $('.eventWindowLeft').css({
+    'translate': '-100% -50%'
+
+  })
+  $('.eventWindowRight').css({
+    'translate': '100% -50%'
+  })
+
+  setTimeout(function() {
+    $('.eventOverlay').css({
+      'display': 'none',
+    })
+    console.log('works');
+  }, 2000);
+})
 
 })
