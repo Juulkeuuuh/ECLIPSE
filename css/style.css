@@ -102,6 +102,7 @@ body{
   transition: all 1000ms ease;
 }
 
+
 hr{
   translate: 0 -15px;
   border: 2px solid #E52521;
@@ -128,7 +129,7 @@ hr{
   }
   
   hr{
-    translate: 0 -15px;
+    translate: 0 -10px;
     border: 2px solid #E52521;
     width: 50px;
     margin-left: 0;
@@ -136,8 +137,108 @@ hr{
 
 }
 
+@media screen and (max-width: 700px){
+  .event h1{
+    font-size: 50px;
+    font-weight: 900;
+    transition: all 1000ms ease;
+  }
+  .event h1 strong{
+    font-size: 50px;
+    font-weight: 100;
+  }
+  
+  .event h1:hover{
+    translate: 100px 0;
+    /* margin-left: 100px; */
+    transition: all 1000ms ease;
+  }
+  
+  hr{
+    translate: 0 -9px;
+    border: 1.5px solid #E52521;
+    width: 50px;
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  .event h1{
+    font-size: 30px;
+    font-weight: 900;
+    transition: all 1000ms ease;
+  }
+  .event h1 strong{
+    font-size: 25px;
+    font-weight: 100;
+  }
+  
+  .event h1:hover{
+    translate: 80px 0;
+    /* margin-left: 100px; */
+    transition: all 1000ms ease;
+  }
+  
+  hr{
+    translate: 0 -9px;
+    border: 1px solid #E52521;
+    width: 20px;
+    margin-left: 0;
+  }
+
+  .data{
+    /* background: white; */
+    position: absolute;
+    z-index: 4;
+    max-width: 90%;
+    left: 5%;
+    top: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #E52521;
+  }
+
+}
 
 
+@media screen and (max-width: 300px){
+  .event h1{
+    font-size: 20px;
+    font-weight: 900;
+    transition: all 1000ms ease;
+  }
+  .event h1 strong{
+    font-size: 15px;
+    font-weight: 100;
+  }
+  
+  .event h1:hover{
+    translate: 50px 0;
+    /* margin-left: 100px; */
+    transition: all 1000ms ease;
+  }
+  
+  hr{
+    translate: 0 -8px;
+    border: .5px solid #E52521;
+    width: 15px;
+    margin-left: 0;
+  }
+
+  .data{
+    /* background: white; */
+    position: absolute;
+    z-index: 4;
+    max-width: 90%;
+    left: 5%;
+    top: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #E52521;
+  }
+
+}
 
 
 
@@ -261,9 +362,11 @@ opacity: 50%;
   width: 100vw;
   height: 100vh;
   z-index: 200;
+  overflow: scroll;
+  /* background: pink; */
 }
 .eventWindowRight{
-  width: 300px;
+  width: 50%;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -279,7 +382,7 @@ opacity: 50%;
   transition: all 2000ms ease;
 }
 .eventWindowLeft{
-  width: 300px;
+  width: 50%;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -355,11 +458,11 @@ opacity: 50%;
 }
 .eventEmbedding{
   width: 80%;
-  height: 90%;
+  /* height: 90%; */
   margin: auto;
   /* margin-top: 10%; */
   margin-top: 10px;
-  background: white;
+  /* background: white; */
   border-radius: 10px;
   padding: 5px;
   font-size: 10px;
@@ -374,6 +477,8 @@ opacity: 50%;
 .location h1{
   font-size: 30px;
   font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .location h2{
@@ -407,4 +512,112 @@ opacity: 50%;
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+
+
+@media screen and (max-width: 750px){
+
+
+.eventWindowRight{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  translate: 0 !important;
+  /* background: white; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px 30px 30px 30px;
+
+  padding-bottom: 10px;
+  overflow: scroll;
+  transition: all 2000ms ease;
+}
+
+.eventWindowLeft{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0px;
+  margin-top: 50px;
+
+  /* left: 0; */
+  translate: 0 !important;
+  /* background: white; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px 30px 30px 30px;
+  padding-bottom: 10px;
+  overflow: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 2000ms ease;
+}
+
+
+
+
+
+
+
+.artists h1{
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.artists h2{
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.extraInfo p{
+  font-size: 10px;
+  text-transform: none;
+}
+
+.location h1{
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.location h2{
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Hide both vertical and horizontal scrollbars */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Optional: Hide scrollbar track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Optional: Hide scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: transparent;
 }

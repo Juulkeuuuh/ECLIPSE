@@ -95,11 +95,11 @@ $('.beneath').click(function () {
 })
 
 
-var eventWindowLeft = viewportWidth - 310;
-console.log(viewportWidth, eventWindowLeft);
-$('.eventWindowLeft').css({
-  'width': eventWindowLeft
-})
+// var eventWindowLeft = viewportWidth - 310;
+// console.log(viewportWidth, eventWindowLeft);
+// $('.eventWindowLeft').css({
+//   'width': eventWindowLeft
+// })
 
 
 
