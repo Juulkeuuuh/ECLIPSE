@@ -93,7 +93,19 @@ $('.beneath').click(function () {
   }, 500);
 
 })
+$('.beneath').click(function () {
+  $('.popup-container-0, .popup-container-1, .popup-container-2, .popup-container-3').each(function (index) {
+    var $popup = $(this);
 
+    // Add a delay for each popup to create a sequential animation
+    setTimeout(function () {
+      $popup.css({
+        'transform': 'scale(1)',
+        'opacity': 1
+      });
+    }, index * 500); // Adjust the delay duration (500ms) as needed
+  });
+});
 
 // var eventWindowLeft = viewportWidth - 310;
 // console.log(viewportWidth, eventWindowLeft);

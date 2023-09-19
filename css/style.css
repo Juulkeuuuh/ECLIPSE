@@ -2,7 +2,10 @@ body{
   background: black;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;  
+}
 
+a{
+  color: #fff;
 }
 
 
@@ -490,6 +493,18 @@ opacity: 50%;
   font-size: 15px;
   text-transform: none;
 }
+
+
+p.artistinfo{
+  font-size: 8px;
+  text-transform: none;
+  width: 40%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 .eventEmbedding{
   width: 80%;
   /* height: 90%; */
@@ -685,55 +700,66 @@ opacity: 50%;
 }
 
 .popup-container-0 {
-  width: 200px;
+  width: 350px;
   top: 50%;
   left: 50%;
 }
 
 .popup-container-1 {
-  width: 150px;
-  top: 30%;
-  left: 23%;
+  width: 350px;
+  top: 10%;
+  left: 10%;
 }
 
 .popup-container-2 {
-  width: 80px;
+  width: 120px;
   top: 70%;
   left: 43%;
 }
 
 .popup-container-3 {
-  width: 230px;
+  width: 330px;
   top: 32%;
   left: 43%;
 }
 
 @media screen and (max-width: 750px){
   .popup-container-0 {
-    width: 100px;
+    width: 150px;
     top: 50%;
     left: 50%;
   }
   
   .popup-container-1 {
-    width: 90px;
-    top: 23%;
-    left: 23%;
+    width: 120px;
+    top: 10%;
+    left: 10%;
   }
   
   .popup-container-2 {
-    width: 50px;
+    width: 100px;
     top: 73%;
     left: 43%;
   }
   
   .popup-container-3 {
-    width: 120px;
+    width: 200px;
     top: 62%;
     left: 15%;
   }
   
+}
 
+
+
+
+.popup-container-0,
+.popup-container-1,
+.popup-container-2,
+.popup-container-3 {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 
