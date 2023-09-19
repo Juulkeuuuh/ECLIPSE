@@ -151,4 +151,58 @@ $('.close').click(function () {
   }, 2000);
 })
 
+
+
+resizeImage();
+$(window).resize(function() {
+  resizeImage();
+});
+
+
+
+
+function resizeImage() {
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  var $image = $('.imgBack');
+
+  if (windowWidth > windowHeight) {
+      // Landscape mode
+      $image.css({
+          'width': '100%',
+          'height': 'auto'
+      });
+  } else {
+      // Portrait or square mode
+      $image.css({
+          'width': 'auto',
+          'height': '100%'
+      });
+  }
+}
+
+
+
+
+
+
+
+
+$(".popup-container").draggable();
+
+// Close the popup when the close button is clicked
+$(".close-button").click(function () {
+  var elementId = $(this).attr("id");
+    $(".popup-container-"+elementId).remove();
+});
+
+
+
+
+
+
+
+
+
+
 })
