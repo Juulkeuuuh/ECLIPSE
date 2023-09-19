@@ -528,12 +528,15 @@ opacity: 50%;
   top: 15px;
   width: 10px;
   height: 10px;
+  /* background: #fff; */
+  color: white;
   opacity: 0.5;
+  text-decoration: none;
 }
 .close:hover {
   opacity: 1;
 }
-.close:before, .close:after {
+/* .close:before, .close:after {
   position: absolute;
   left: 0px;
   content: ' ';
@@ -546,7 +549,7 @@ opacity: 50%;
 }
 .close:after {
   transform: rotate(-45deg);
-}
+} */
 
 
 
